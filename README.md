@@ -13,5 +13,6 @@ roll the dice and print the number
 create a password
 
 ## functional example:
-![image]()
+![image](https://user-images.githubusercontent.com/108236100/196060833-0cd0e480-c474-4a9d-b561-98205abca44c.png)
+
 
