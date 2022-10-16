@@ -19,7 +19,7 @@ def get_text_messages(message):
         for functional in range(len(bot_functional)):
             bot.send_message(message.from_user.id, f'{bot_functional[functional]}')
     elif message.text == '/random_number':
-        msg = bot.send_message(message.from_user.id, f'Input your first number')
+        msg = bot.send_message(message.from_user.id, f'Input your first number ')
         bot.register_next_step_handler(msg, first_random_number)
     elif message.text == '/random_dice_number':
         number = random.randint(1, 6)
@@ -32,14 +32,14 @@ def get_text_messages(message):
 def first_random_number(message):
     global first_number
     first_number = message.text
-    msg = bot.send_message(message.from_user.id, f'Input your second number')
+    msg = bot.send_message(message.from_user.id, f'Input your second number ')
     bot.register_next_step_handler(msg, second_random_number)
 
 
 def second_random_number(message):
     second_number = message.text
     bot.send_message(message.from_user.id, f'Number can be in the range(from {first_number} to {second_number})\n'
-                                           f'Your random number:'
+                                           f'Your random number: '
                                            f'{random.randint(int(first_number), int(second_number))}')
 
 
